@@ -9,7 +9,7 @@ let getData = (cFunc) => {
     req.addEventListener('readystatechange', () => {
         if (req.readyState === 4 && req.status === 200){
             cFunc(undefined, req.responseText);
-        } else {
+        } else if(req.readyState === 4){
             cFunc('Could not complete request', undefined);
         }
     });
