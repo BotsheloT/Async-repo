@@ -19,6 +19,7 @@ let getData = (cFunc) => {
     req.send();
 }
 
+console.log(1);
 //Calling function
 getData((err, data) =>{
     console.log('Callback fired');
@@ -26,3 +27,4 @@ getData((err, data) =>{
         console.log(err);
     }else console.log(data);
 });
+console.log(2);
