@@ -5,8 +5,10 @@ const req = new XMLHttpRequest;
 
 //Event listener
 req.addEventListener('readystatechange', () => {
-    if (req.readyState === 4){
+    if (req.readyState === 4 && req.status === 200){
         console.log(req.responseText);
+    } else {
+        console.log('Could not fetch data');
     }
 });
 
